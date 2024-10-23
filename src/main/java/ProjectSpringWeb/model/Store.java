@@ -18,6 +18,7 @@ public class Store {
     private String address;
 
     public Store(String storeName, String address) {
+        this.id = id;
         this.storeName = storeName;
         this.address = address;
     }

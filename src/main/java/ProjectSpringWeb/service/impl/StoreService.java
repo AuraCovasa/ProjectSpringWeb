@@ -17,8 +17,9 @@ public class StoreService{
         this.storeRepository = storeRepository;
     }
 
-    public Optional<Store> getStoreByName(String storeName) {
-        return storeRepository.findByStoreName(storeName);
+   public Store findStoreByName(String name) {
+        Optional<Store> storeOptional = storeRepository.findByStoreName(name);
+        return storeOptional.orElse(null); // Return null if not found
     }
 
 }
